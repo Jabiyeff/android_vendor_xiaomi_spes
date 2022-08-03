@@ -3490,8 +3490,6 @@
       <data name="use_qmuxd" type="int"> 0 </data>
       <data name="dpm_retry_timeout" type="int"> 10000 </data>
       <data name="wda_data_format_enabled" type="int"> 1 </data>
-      <data name="kfc_mode" type="int"> 4 </data>
-      <data name="qmi_pc" type="int"> 1 </data>
       <data name="netmgr_listen_ev_proto" type="int"> 1 </data>
 
       <data name="single_qmux_ch_enabled" type="int"> 1 </data>

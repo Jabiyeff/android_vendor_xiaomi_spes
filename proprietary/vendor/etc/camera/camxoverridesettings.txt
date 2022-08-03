@@ -9,7 +9,6 @@ multiCameraHWSyncMask=0x1
 multiCameraFPSMatchMask=0x1
 multiCameraFrameSyncMask=0x1
 enableNCSService=TRUE
-invalidSOFThreshold=26
 
 logInfoMask=0
 overrideLogLevels=0x1
