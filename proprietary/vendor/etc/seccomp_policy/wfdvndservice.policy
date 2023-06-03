@@ -78,3 +78,4 @@ accept4: 1
 sendmsg: 1
 recvfrom: 1
 mremap: 1
+gettimeofday: 1

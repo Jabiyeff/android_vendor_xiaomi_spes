@@ -141,8 +141,7 @@ DELETE FROM qcril_emergency_source_voice_mcc_mnc_table where MCC = '405' AND MNC
 DELETE FROM qcril_emergency_source_voice_mcc_mnc_table where MCC = '405' AND MNC = '874' AND NUMBER = '102';
 DELETE FROM qcril_emergency_source_voice_mcc_mnc_table where MCC = '405' AND MNC = '874' AND NUMBER = '108';
 
-DELETE FROM qcril_emergency_source_hard_mcc_table where MCC = '222' AND NUMBER = '118';
-DELETE FROM qcril_emergency_source_hard_mcc_table where MCC = '222' AND NUMBER = '119';
+
 DELETE FROM qcril_emergency_source_mcc_table where MCC = '260' AND NUMBER = '997';
 DELETE FROM qcril_emergency_source_mcc_table where MCC = '260' AND NUMBER = '998';
 DELETE FROM qcril_emergency_source_mcc_table where MCC = '260' AND NUMBER = '999';
