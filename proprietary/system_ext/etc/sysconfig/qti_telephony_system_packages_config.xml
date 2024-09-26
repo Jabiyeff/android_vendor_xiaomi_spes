@@ -31,6 +31,7 @@ Full documentation at frameworks/base/data/etc/preinstalled-packages-platform.xm
 
     <install-in-user-type package="com.qualcomm.qcrilmsgtunnel">
         <install-in user-type="SYSTEM" />
+        <install-in user-type="FULL" />
     </install-in-user-type>
 
     <!-- telephony-apps -->
