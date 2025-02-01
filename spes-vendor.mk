@@ -1239,6 +1239,7 @@ PRODUCT_PACKAGES += \
     CneApp \
     IWlanService \
     libcld80211 \
+    libcrypto-v34 \
     libtinyxml \
     TimeService \
     PowerOffAlarm \
