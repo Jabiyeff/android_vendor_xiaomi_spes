@@ -28,23 +28,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "libcrypto-v34",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libcrypto-v34.so"],
-		},
-	},
-	compile_multilib: "64",
-	check_elf_files: false,
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
 	name: "eglSubDriverAndroid",
 	owner: "xiaomi",
 	strip: {
@@ -61,46 +44,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "both",
 	check_elf_files: false,
 	relative_install_path: "egl",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libthermalclient",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/libthermalclient.so"],
-		},
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libthermalclient.so"],
-		},
-	},
-	compile_multilib: "both",
-	check_elf_files: false,
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libfastcvopt",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/libfastcvopt.so"],
-		},
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libfastcvopt.so"],
-		},
-	},
-	compile_multilib: "both",
-	check_elf_files: false,
 	prefer: true,
 	soc_specific: true,
 }
@@ -512,6 +455,26 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+	name: "libfastcvopt",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libfastcvopt.so"],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libfastcvopt.so"],
+		},
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
 	name: "libgpudataproducer",
 	owner: "xiaomi",
 	strip: {
@@ -632,7 +595,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "libmmosal",
+	name: "libmmosal_vendor",
+	stem: "libmmosal",
 	owner: "xiaomi",
 	strip: {
 		none: true,
@@ -1063,6 +1027,26 @@ cc_prebuilt_library_shared {
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libsysmon_cdsp_skel.so"],
+		},
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libthermalclient",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libthermalclient.so"],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libthermalclient.so"],
 		},
 	},
 	compile_multilib: "both",
@@ -2210,23 +2194,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "libsn100u_fw",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib/libsn100u_fw.so"],
-		},
-	},
-	compile_multilib: "32",
-	check_elf_files: false,
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
 	name: "libsndmonitor",
 	owner: "xiaomi",
 	strip: {
@@ -2635,24 +2602,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "modules",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/modules/modules.softdep"],
-		},
-	},
-	compile_multilib: "32",
-	check_elf_files: false,
-	relative_install_path: "modules",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
 	name: "libasphere",
 	owner: "xiaomi",
 	strip: {
@@ -2761,7 +2710,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.wifidisplaysession@1.0",
+	name: "vendor.qti.hardware.wifidisplaysession@1.0_vendor",
+	stem: "vendor.qti.hardware.wifidisplaysession@1.0",
 	owner: "xiaomi",
 	strip: {
 		none: true,
@@ -4785,7 +4735,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "com.qualcomm.qti.dpm.api@1.0",
+	name: "com.qualcomm.qti.dpm.api@1.0_vendor",
+	stem: "com.qualcomm.qti.dpm.api@1.0",
 	owner: "xiaomi",
 	strip: {
 		none: true,
@@ -9892,7 +9843,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.fm@1.0",
+	name: "vendor.qti.hardware.fm@1.0_vendor",
+	stem: "vendor.qti.hardware.fm@1.0",
 	owner: "xiaomi",
 	strip: {
 		none: true,
@@ -10742,7 +10694,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "vendor.qti.imsrtpservice@3.0",
+	name: "vendor.qti.imsrtpservice@3.0_vendor",
+	stem: "vendor.qti.imsrtpservice@3.0",
 	owner: "xiaomi",
 	strip: {
 		none: true,
@@ -11022,51 +10975,25 @@ prebuilt_rfsa {
 	soc_specific: true,
 }
 
-prebuilt_rfsa {
-	name: "misound_karaoke_res",
-	filename: "misound_karaoke_res.bin",
+cc_prebuilt_library_shared {
+	name: "com.qualcomm.qti.dpm.api@1.0",
 	owner: "xiaomi",
-	src: "proprietary/vendor/lib/rfsa/adsp/misound_karaoke_res.bin",
-	relative_install_path: "adsp",
-	soc_specific: true,
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/system_ext/lib/com.qualcomm.qti.dpm.api@1.0.so"],
+		},
+		android_arm64: {
+			srcs: ["proprietary/system_ext/lib64/com.qualcomm.qti.dpm.api@1.0.so"],
+		},
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	prefer: true,
+	system_ext_specific: true,
 }
-
-prebuilt_rfsa {
-	name: "misound_karaokemix_res",
-	filename: "misound_karaokemix_res.bin",
-	owner: "xiaomi",
-	src: "proprietary/vendor/lib/rfsa/adsp/misound_karaokemix_res.bin",
-	relative_install_path: "adsp",
-	soc_specific: true,
-}
-
-prebuilt_rfsa {
-	name: "misound_res",
-	filename: "misound_res.bin",
-	owner: "xiaomi",
-	src: "proprietary/vendor/lib/rfsa/adsp/misound_res.bin",
-	relative_install_path: "adsp",
-	soc_specific: true,
-}
-
-prebuilt_rfsa {
-	name: "misound_res_headphone",
-	filename: "misound_res_headphone.bin",
-	owner: "xiaomi",
-	src: "proprietary/vendor/lib/rfsa/adsp/misound_res_headphone.bin",
-	relative_install_path: "adsp",
-	soc_specific: true,
-}
-
-prebuilt_rfsa {
-	name: "misound_res_spk",
-	filename: "misound_res_spk.bin",
-	owner: "xiaomi",
-	src: "proprietary/vendor/lib/rfsa/adsp/misound_res_spk.bin",
-	relative_install_path: "adsp",
-	soc_specific: true,
-}
-
 
 cc_prebuilt_library_shared {
 	name: "libdpmctmgr",
@@ -11148,6 +11075,25 @@ cc_prebuilt_library_shared {
 	system_ext_specific: true,
 }
 
+cc_prebuilt_library_shared {
+	name: "libmmosal",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/system_ext/lib/libmmosal.so"],
+		},
+		android_arm64: {
+			srcs: ["proprietary/system_ext/lib64/libmmosal.so"],
+		},
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	prefer: true,
+	system_ext_specific: true,
+}
 
 cc_prebuilt_library_shared {
 	name: "libmmparser_lite",
@@ -11501,6 +11447,22 @@ cc_prebuilt_library_shared {
 	system_ext_specific: true,
 }
 
+cc_prebuilt_library_shared {
+	name: "vendor.qti.hardware.wifidisplaysession@1.0",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/system_ext/lib/vendor.qti.hardware.wifidisplaysession@1.0.so"],
+		},
+	},
+	compile_multilib: "32",
+	check_elf_files: false,
+	prefer: true,
+	system_ext_specific: true,
+}
 
 cc_prebuilt_library_shared {
 	name: "fm_helium",
@@ -11689,7 +11651,39 @@ cc_prebuilt_library_shared {
 	system_ext_specific: true,
 }
 
+cc_prebuilt_library_shared {
+	name: "vendor.qti.hardware.fm@1.0",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.fm@1.0.so"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	prefer: true,
+	system_ext_specific: true,
+}
 
+cc_prebuilt_library_shared {
+	name: "vendor.qti.imsrtpservice@3.0",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/system_ext/lib64/vendor.qti.imsrtpservice@3.0.so"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	prefer: true,
+	system_ext_specific: true,
+}
 
 cc_prebuilt_library_shared {
 	name: "vendor.qti.imsrtpservice@3.1",
@@ -12612,6 +12606,23 @@ cc_prebuilt_binary {
 	soc_specific: true,
 }
 
+cc_prebuilt_binary {
+	name: "vendor.qti.hardware.soter@1.0-service",
+	owner: "xiaomi",
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/bin/hw/vendor.qti.hardware.soter@1.0-service"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	strip: {
+		none: true,
+	},
+	prefer: true,
+	relative_install_path: "hw",
+	soc_specific: true,
+}
 
 cc_prebuilt_binary {
 	name: "vendor.qti.hardware.tui_comm@1.0-service-qti",

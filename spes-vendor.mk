@@ -318,9 +318,17 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/spes/proprietary/vendor/firmware/scuba_ipa_fws.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/scuba_ipa_fws.mdt \
     vendor/xiaomi/spes/proprietary/vendor/firmware/st21nfc_fw.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/st21nfc_fw.bin \
     vendor/xiaomi/spes/proprietary/vendor/firmware/st21nfc_fw7.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/st21nfc_fw7.bin \
+    vendor/xiaomi/spes/proprietary/vendor/lib/libsn100u_fw.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsn100u_fw.so \
     vendor/xiaomi/spes/proprietary/vendor/lib/modules/modules.alias:$(TARGET_COPY_OUT_VENDOR)/lib/modules/modules.alias \
     vendor/xiaomi/spes/proprietary/vendor/lib/modules/modules.dep:$(TARGET_COPY_OUT_VENDOR)/lib/modules/modules.dep \
     vendor/xiaomi/spes/proprietary/vendor/lib/modules/modules.load:$(TARGET_COPY_OUT_VENDOR)/lib/modules/modules.load \
+    vendor/xiaomi/spes/proprietary/vendor/lib/modules/modules.softdep:$(TARGET_COPY_OUT_VENDOR)/lib/modules/modules.softdep \
+    vendor/xiaomi/spes/proprietary/vendor/lib/modules/rdbg.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/rdbg.ko \
+    vendor/xiaomi/spes/proprietary/vendor/lib/rfsa/adsp/misound_karaoke_res.bin:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/misound_karaoke_res.bin \
+    vendor/xiaomi/spes/proprietary/vendor/lib/rfsa/adsp/misound_karaokemix_res.bin:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/misound_karaokemix_res.bin \
+    vendor/xiaomi/spes/proprietary/vendor/lib/rfsa/adsp/misound_res.bin:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/misound_res.bin \
+    vendor/xiaomi/spes/proprietary/vendor/lib/rfsa/adsp/misound_res_headphone.bin:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/misound_res_headphone.bin \
+    vendor/xiaomi/spes/proprietary/vendor/lib/rfsa/adsp/misound_res_spk.bin:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/misound_res_spk.bin \
     vendor/xiaomi/spes/proprietary/vendor/lib64/camera/com.qti.sensormodule.k7t_aac_gc02m1_macro_ii.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensormodule.k7t_aac_gc02m1_macro_ii.bin \
     vendor/xiaomi/spes/proprietary/vendor/lib64/camera/com.qti.sensormodule.k7t_aac_gc08a3_ultra_i.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensormodule.k7t_aac_gc08a3_ultra_i.bin \
     vendor/xiaomi/spes/proprietary/vendor/lib64/camera/com.qti.sensormodule.k7t_aac_s5k3l6_front_ii.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensormodule.k7t_aac_s5k3l6_front_ii.bin \
@@ -441,13 +449,14 @@ PRODUCT_PACKAGES += \
     libdsi_netctrl \
     libdsutils \
     libfastcvdsp_stub \
+    libfastcvopt \
     libgpudataproducer \
     libgsl \
     libidl \
     libllvm-glnext \
     libllvm-qcom \
     libmdsprpc \
-    libmmosal \
+    libmmosal_vendor \
     libqcci_legacy \
     libqcmaputils \
     libqdi \
@@ -469,6 +478,7 @@ PRODUCT_PACKAGES += \
     libsdsprpc \
     libswvdec \
     libsysmon_cdsp_skel \
+    libthermalclient \
     vendor.qti.hardware.dsp@1.0 \
     vendor.qti.hardware.fingerprint@1.0 \
     vendor.qti.hardware.vpp@1.1 \
@@ -482,9 +492,7 @@ PRODUCT_PACKAGES += \
     libApeSwDec \
     libFileMux_proprietary \
     libFlacSwDec \
-    libcrypto-v34 \
     libMpeg4SwEncoder \
-    libfastcvopt \
     libOmxAacDec \
     libOmxAlacDec \
     libOmxAlacDecSw \
@@ -537,11 +545,9 @@ PRODUCT_PACKAGES += \
     libmulawdec \
     libqtigef \
     libsmwrapper \
-    libsn100u_fw \
     libsndmonitor \
     libspkrprot \
     libssrec \
-    libthermalclient \
     libsurround_3mic_proc \
     libwfdcodecv4l2_proprietary \
     libwfdcommonutils_proprietary \
@@ -563,14 +569,13 @@ PRODUCT_PACKAGES += \
     libwfduibcsrc_proprietary \
     libwfduibcsrcinterface_proprietary \
     libwfdutils_proprietary \
-    modules \
     libasphere \
     libmisoundfx \
     libqcbassboost \
     libqcreverb \
     libqcvirt \
     libshoebox \
-    vendor.qti.hardware.wifidisplaysession@1.0 \
+    vendor.qti.hardware.wifidisplaysession@1.0_vendor \
     vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl \
     android.hardware.camera.provider@2.4-external \
     android.hardware.camera.provider@2.4-legacy \
@@ -668,7 +673,6 @@ PRODUCT_PACKAGES += \
     com.qtistatic.stats.awb \
     com.qtistatic.stats.pdlib \
     com.vidhance.node.processing \
-    com.fingerprints.extension@1.0 \
     com.qti.chiusecaseselector \
     com.qti.feature2.anchorsync \
     com.qti.feature2.demux \
@@ -685,7 +689,7 @@ PRODUCT_PACKAGES += \
     com.qti.feature2.serializer \
     com.qti.feature2.stub \
     com.qti.feature2.swmf \
-    com.qualcomm.qti.dpm.api@1.0 \
+    com.qualcomm.qti.dpm.api@1.0_vendor \
     com.qualcomm.qti.imscmservice@1.0 \
     com.qualcomm.qti.imscmservice@2.0 \
     com.qualcomm.qti.imscmservice@2.1 \
@@ -984,7 +988,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.data.latency@1.0 \
     vendor.qti.hardware.data.lce@1.0 \
     vendor.qti.hardware.data.qmi@1.0 \
-    vendor.qti.hardware.fm@1.0 \
+    vendor.qti.hardware.fm@1.0_vendor \
     vendor.qti.hardware.mwqemadapter@1.0 \
     vendor.qti.hardware.qccsyshal@1.0 \
     vendor.qti.hardware.qccvndhal@1.0-halimpl \
@@ -1034,7 +1038,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.ims.rcsconfig@2.0 \
     vendor.qti.ims.rcsconfig@2.1 \
     vendor.qti.imsrtpservice@3.0-service-Impl \
-    vendor.qti.imsrtpservice@3.0 \
+    vendor.qti.imsrtpservice@3.0_vendor \
     vendor.qti.latency@2.0 \
     vendor.qti.latency@2.1 \
     vendor.qti.qspmhal@1.0-impl \
@@ -1059,11 +1063,6 @@ PRODUCT_PACKAGES += \
     libscveT2T_skel \
     libsns_device_mode_skel \
     libsns_low_lat_stream_skel \
-    misound_karaoke_res \
-    misound_karaokemix_res \
-    misound_res \
-    misound_res_headphone \
-    misound_res_spk \
     com.qualcomm.qti.dpm.api@1.0 \
     libdpmctmgr \
     libdpmfdmgr \
