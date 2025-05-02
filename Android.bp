@@ -12083,22 +12083,6 @@ prebuilt_etc_xml {
 }
 
 cc_prebuilt_binary {
-	name: "chargeonlymode",
-	owner: "xiaomi",
-	target: {
-		android_arm64: {
-			srcs: ["proprietary/system/bin/chargeonlymode"],
-		},
-	},
-	compile_multilib: "64",
-	check_elf_files: false,
-	strip: {
-		none: true,
-	},
-	prefer: true,
-}
-
-cc_prebuilt_binary {
 	name: "ATFWD-daemon",
 	owner: "xiaomi",
 	target: {

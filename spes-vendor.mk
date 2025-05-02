@@ -1145,7 +1145,6 @@ PRODUCT_PACKAGES += \
     manifest_vendor.xiaomi.hardware.mlipay.xml \
     manifest_vendor.xiaomi.hardware.mtdservice.xml \
     vendor.qti.gnss@4.0-service.xml \
-    chargeonlymode \
     ATFWD-daemon \
     STFlashTool \
     adpl \
