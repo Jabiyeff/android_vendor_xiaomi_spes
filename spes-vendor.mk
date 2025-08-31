@@ -420,7 +420,6 @@ PRODUCT_PACKAGES += \
     libCB \
     libOpenCL \
     libVkLayer_q3dtools \
-    libadreno_app_profiles \
     libadreno_utils \
     libadsp_default_listener \
     libadsprpc \
@@ -695,6 +694,7 @@ PRODUCT_PACKAGES += \
     libacdbloader \
     libacdbrtac \
     libadiertac \
+    libadreno_app_profiles \
     libaidenoiser \
     libalCFR \
     libanc_dc_base \
@@ -882,7 +882,6 @@ PRODUCT_PACKAGES += \
     libssc_default_listener \
     libssd \
     libst_sr_models \
-    libstfactory-vendor \
     libswregistrationalgo \
     libsynergy_loc_api \
     libsystem_health_mon \
@@ -1098,7 +1097,6 @@ PRODUCT_PACKAGES += \
     manifest_vendor.xiaomi.hardware.mtdservice.xml \
     vendor.qti.gnss@4.0-service.xml \
     ATFWD-daemon \
-    STFlashTool \
     adpl \
     adsprpcd \
     batterysecret \
