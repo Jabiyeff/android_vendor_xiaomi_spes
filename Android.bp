@@ -5,7 +5,6 @@
 soong_namespace {
     imports: [
         "device/xiaomi/spes",
-        "device/xiaomi/spes/hals",
         "hardware/qcom-caf/sm8250",
         "hardware/qcom-caf/wlan",
         "hardware/xiaomi",
@@ -2582,6 +2581,32 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libOmxAacEnc",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libOmxAacEnc.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libOmxAlacDec",
     owner: "xiaomi",
     strip: {
@@ -2650,6 +2675,32 @@ cc_prebuilt_library_shared {
                 "libutils",
                 "liblog",
                 "libion",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libOmxAmrEnc",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libOmxAmrEnc.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "liblog",
                 "libc++",
                 "libc",
                 "libm",
@@ -2797,6 +2848,32 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libOmxEvrcEnc",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libOmxEvrcEnc.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libOmxG711Dec",
     owner: "xiaomi",
     strip: {
@@ -2811,6 +2888,33 @@ cc_prebuilt_library_shared {
                 "libutils",
                 "liblog",
                 "libion",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libOmxG711Enc",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libOmxG711Enc.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "liblog",
+                "libcutils",
                 "libc++",
                 "libc",
                 "libm",
@@ -2904,6 +3008,32 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libOmxQcelp13Enc",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libOmxQcelp13Enc.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libOmxSwVdec",
     owner: "xiaomi",
     strip: {
@@ -2954,6 +3084,67 @@ cc_prebuilt_library_shared {
                 "libui",
                 "libutils",
                 "libc2dcolorconvert",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libOmxVdec",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libOmxVdec.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libion",
+                "libc2dcolorconvert",
+                "libqdMetaData",
+                "libplatformconfig",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libOmxVenc",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libOmxVenc.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libplatformconfig",
+                "libion",
+                "libc2dcolorconvert",
+                "libqdMetaData",
+                "libfastcvopt",
                 "libc++",
                 "libc",
                 "libm",

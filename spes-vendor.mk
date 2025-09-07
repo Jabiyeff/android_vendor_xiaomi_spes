@@ -472,20 +472,27 @@ PRODUCT_PACKAGES += \
     libMpeg4SwEncoder \
     libMpeghSwEnc \
     libOmxAacDec \
+    libOmxAacEnc \
     libOmxAlacDec \
     libOmxAlacDecSw \
     libOmxAmrDec \
+    libOmxAmrEnc \
     libOmxAmrwbplusDec \
     libOmxApeDec \
     libOmxApeDecSw \
     libOmxDsdDec \
     libOmxEvrcDec \
+    libOmxEvrcEnc \
     libOmxG711Dec \
+    libOmxG711Enc \
     libOmxMpeghDecSw \
     libOmxMpeghEncSw \
     libOmxQcelp13Dec \
+    libOmxQcelp13Enc \
     libOmxSwVdec \
     libOmxSwVencMpeg4 \
+    libOmxVdec \
+    libOmxVenc \
     libOmxVideoDSMode \
     libOmxWmaDec \
     liba2dpoffload \
